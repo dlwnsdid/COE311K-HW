@@ -18,5 +18,6 @@ plt.plot(x_, a_fit(x_), color = 'r')
 plt.plot(x_, c_fit(x_), color = 'b')
 plt.plot(x, y, 'o')
 
+plt.savefig('plot2.png')
 plt.ylim(0, 2)
 plt.show()

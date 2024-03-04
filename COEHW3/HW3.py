@@ -27,3 +27,11 @@ def least_square_fourier(x, y, k, omega_o):
     
     a = np.linalg.solve(np.dot(Z.T, Z), np.dot(Z.T, y))
     return a
+
+def my_dft(x):
+    n = len(x)
+    e = np.zeros(n)
+    for i in range(n):
+        e[i] = np.exp(-1j * i * (2 * np.pi / n))
+    F = np.dot(x, e)
+    return F
